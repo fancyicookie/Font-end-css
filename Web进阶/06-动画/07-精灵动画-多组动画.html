@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>精灵动画</title>
+  <style>
+    .box {
+      /* 1680/12 : 保证显示区域的尺寸和一个精灵小图的尺寸相同 */
+      width: 140px;
+      height: 140px;
+      /* border: 1px solid #000; */
+      background-image: url(./images/bg.png);
+
+      /* 12: 精灵小图的个数 */
+      animation: 
+        move 1s steps(12) infinite,
+        run 5s forwards;
+    }
+
+
+    @keyframes move {
+        /* 省略 */
+        /* from {
+          background-position: 0 0;
+        } */
+        to {
+          /* 1680: 精灵图的宽度 */
+          background-position:  -1680px 0;
+        }
+    }
+
+    /* 定义一个盒子移动的动画  800px */
+    @keyframes run {
+      /* 动画的开始状态和盒子的默认样式相同的, 可以省略开始状态的代码 */
+      /* from {
+        transform: translateX(0);
+      } */
+      to {
+        transform: translateX(800px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    准备显示区域
+      设置盒子尺寸是一张小图的尺寸,背景图为当前精灵图
+    定义动画
+      改变背景图的位置(移动距离是精灵图的宽度)
+    使用动画
+      添加速度曲线steps(N), N与精灵图上的小图个数一致
+   -->
+  <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /* 字号 */
+            font-size: 24px;
+
+        }
+
+        div {
+            /* 加粗 */
+            font-weight: 700;
+
+            /* 默认微软雅黑字体 */
+            font-family: 宋体;
+
+            /* 如果用户电脑没有安装Arial，则按Helvetica显示 */
+            /* 如果没有Helvetica，则按照任意一种无衬线字体表示 */
+            /* font-family: Arial, Helvetica, sans-serif; */
+        }
+
+        h1 {
+            /* 不加粗 */
+            font-weight: 400;
+        }
+
+        span {
+            /* <em></em>   <i></i> */
+            /* 文字倾斜 */
+            font-style: italic;
+            /* 正常不倾斜 font-style: normal; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 默认字号16 -->
+    <p>字号为24</p>
+
+    <!-- font-weight正常是400，加粗为700 -->
+    <div>这是加粗div 并变宋体</div>
+
+    <h1>一级标题变细</h1>
+
+    <span>倾斜</span>
+</body>
+</html>

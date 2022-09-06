@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            /* 因为有通栏，占满一行的边框 */
+            height: 40px;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        .nav ul {
+            /* 因为ul中所有的内容都在网页的宽度固定并且水平居中的位置 */
+            list-style: none;
+            /* 我以为这个宽度不用写，自动是浏览器的宽。不写会随着浏览器变化 */
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .nav ul li {
+            float: left;
+            border-right: 1px solid #000;
+            /* 这里将li的宽高固定了 */
+            height: 40px;
+            width: 20%;
+            /* 自动内减 */
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 40px;  
+        }
+        .nav ul li:last-child {
+            border-right: none;
+        }
+
+        .nav ul li a {
+            /* a标签默认是行内元素，无法设置宽高；行内块和块可以 */
+            display: block;
+            /* 宽度不设置会默认占满一行 */
+            text-decoration: none;
+            line-height: 40px;
+            font-size: 14px;
+            color: #4e4e4e;
+        }
+
+        ul li .app {
+            position: relative;
+        }
+
+        .code {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 42px;
+            display: none;
+        }
+
+        .nav li a:hover img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 这里导航出现一个问题：我如果缩小页面，导肮会整体变形 -->
+    <div class="nav clearfix">
+        <ul>
+            <li><a href="#">我要投资</a></li>
+            <li><a href="#">平台介绍</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#" class="app">手机微金所 <img src="../images/chi.jpeg" alt="chi" width="200px" height="200px" class="code"></a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</body>
+</html>

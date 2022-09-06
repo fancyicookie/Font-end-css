@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* perspective：值 800-1200之间 */
+            /* 透视距离也称为视距，所谓的视距就是人眼到屏幕的距离为800-1000px之间 */
+            perspective: 1000px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .box:hover {
+            transform: translate3d(50px, 100px, 200px);
+            /* 无法观察到Z轴的变化，需要添加perspective属性 */
+            /* transform: translateZ(100px);
+            transform: translateZ(-100px); */
+            /* 添加给父级 perspective */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+</body>
+</html>

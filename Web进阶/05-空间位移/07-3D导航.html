@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .nav3d {
+            width: 300px;
+            height: 500px;
+            margin: 100px auto;
+        }
+
+        .nav3d li {
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            transition: all 0.5s;
+            transform-style: preserve-3d;
+            /* 旋转，在制作效果过程中能看到立体盒子 */
+            /* transform: rotateX(-20deg) rotateY(30deg) ; */
+
+             /* 测试缩放的效果 */
+             /* transform: scale3d(0.5,1.1,2); */
+        }
+
+
+        .nav3d li a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+
+            
+        }
+
+        .nav3d li a:first-child {
+            background-color: green;
+            transform: translateZ(20px);
+        }
+
+        .nav3d li a:last-child {
+            background-color: orange;
+            /* 旋转会改变坐标轴向，所以才是Z轴向上移动 */
+            transform: rotateX(90deg) translateZ(20px) ;
+        }
+
+        .nav3d li:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav3d">
+        <ul>
+            <li>
+                <a href="#">首页</a>
+                <a href="#">Index</a>
+            </li>
+            <li>
+                <a href="#">登录</a>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">注册</a>
+                <a href="#">Register</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 
+        搭建立方体
+            li标签 
+                添加立体属性transform-style: preserve-3d
+                添加旋转属性，便于观察
+            调节a标签的位置
+                a标签定位
+                英文部分添加 旋转 和 位移样式
+                中文部分添加位移样式
+     -->
+</body>
+</html>

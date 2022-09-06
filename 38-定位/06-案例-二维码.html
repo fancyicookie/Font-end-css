@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 清除浮动 */
+        .clearfix::before, .clearfix::after {
+            content: "";
+            display: table;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        .nav {
+            /* margin只对标准流起作用，所以当出现浮动无法居中 */
+            height: 40px;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        .nav ul {
+            list-style: none;
+            /* 如果我没有给ul加宽度，就会出现缩小页面，导肮整体变形的问题，因为li是浮动的 */
+            width: 1200px;
+            /* margin: 0 auto; */
+        }
+        .nav ul li {
+            float: left;
+            border-right: 1px solid #000;
+            height: 40px;
+        }
+        .nav ul li:first-child {
+            padding-left: 230px;
+        }
+        .nav ul li:last-child {
+            border-right: 0;
+        }
+
+        .nav ul li a {
+            display: block;
+            /* 宽度不设置会默认占满一行 */
+            padding: 0 70px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            color: #4e4e4e;
+        }
+
+        ul li .app {
+            position: relative;
+        }
+
+        .code {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 42px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 这里导航出现一个问题：我如果缩小页面，导肮会整体变形 -->
+    <div class="nav clearfix">
+        <ul>
+            <li><a href="#">我要投资</a></li>
+            <li><a href="#">平台介绍</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#" class="app">手机微金所 <img src="../images/chi.jpeg" alt="chi" width="200px" height="200px" class="code"></a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</body>
+</html>

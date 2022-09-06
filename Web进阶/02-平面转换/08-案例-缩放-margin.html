@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+            /* 超出父级的隐藏 */
+            overflow: hidden;
+        }
+
+        .box p {
+            color: rgb(148, 102, 15);
+            padding: 10px 10px 0 10px;
+        }
+        .box .pic {
+            position: relative;
+            /* background-color: orange; */
+        }
+
+        /* 伪元素是行内元素 */
+        .box .pic::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -29px;
+            margin-top: -29px;
+            content: "";
+            width: 58px;
+            height: 58px;
+            background-image: url(./images/play.jpeg);
+
+            transform: scale(5);
+            /* opacity: 0; */
+            transition: all 0.5s;
+        }
+
+        /* 鼠标移入li，让after有变化 */
+        .box li:hover .pic::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* 1.播放按钮的盒子，压在img标签的上面（定位） */
+        /* 2.hover的时候有缩放效果
+                默认：看不见，特别大的
+                hover：看得见，小的 */
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div class="pic">
+                    <img src="./images/jiatou.jpeg" alt="" width="600px">
+                    <!-- 伪元素添加播放按钮 -->
+                </div>
+                <p>【水果篮子】透的倾诉</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

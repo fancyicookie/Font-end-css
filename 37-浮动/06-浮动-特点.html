@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动会脱离标准流,文字没有脱离 */
+        /* 浮动元素比标准流高半个级别,可以覆盖标准流中的元素 */
+        /* 转变成浮动的元素相当于漂浮在页面上,标准流元素会向上移动到适合位置 */
+        /* 浮动找浮动,下一个浮动元素会在上一个浮动元素后面左右浮动 */
+
+        /* 浮动可以一行显示多个,且可以设置宽高 */
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+
+            margin-top: 50px;
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            float: left;
+
+            /* 因为有浮动,所以margin不生效----一般浮动主要是用于左右,不用于中间 */
+            margin: 0 auto;
+        }
+
+        .three {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            /* float: left; */
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+    <div class="three">three</div>
+</body>
+</html>

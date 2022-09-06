@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 18px;
+            height: 24px;
+            background-color: pink;
+            background-image: url(./images/taobao.png);
+            /* 背景图位置属性：改变背景图的位置 */
+            background-position: -3px 0px;
+        }
+
+        b {
+            display: inline-block;
+            width: 25px;
+            height: 21px;
+            background-color: skyblue;
+            background-image: url(./images/taobao.png);
+            /* 背景图位置属性：改变背景图的位置 */
+            background-position: 1px -90px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 精灵图：多个小图排列,只显示我们想要的部分 -->
+    <!-- 
+        步骤：
+            1.创建一个盒子，设置盒子和小图尺寸相同
+            2.将精灵图设置为盒子的背景图片------为什么没有设置img
+            3.修改背景图的位置background-position  取负值。
+     -->
+     <!-- 精灵图使用行内标签 -->
+
+     <span></span>
+     
+     <b></b>
+</body>
+</html>

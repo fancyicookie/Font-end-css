@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            width: 500px;
+            height: 400px;
+            background-color: green;
+
+            background-image: url(./images/chi.jpeg);
+            background-repeat: no-repeat;
+
+            /* background-size: 400px; */
+            /* background-size: 50%; */
+
+            /* 如果图的高或宽与盒子尺寸相同，另一个方向停止缩放，导致盒子可能留白 */
+            background-size: contain;
+
+            /* 保证宽高和盒子尺寸相同，会导致图片显示不全 */
+            /* background-size: cover; */
+
+            /* 工作中，图的比例与盒子比例相同 contain与cover效果完全相同*/
+        }
+    </style>
+</head>
+<body>
+    <!-- background-size: 高度 宽度 数字+px 百分比 contain cover -->
+    <div class="img">
+        
+    </div>
+
+</body>
+</html>

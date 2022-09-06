@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 结构：.类名 {} */
+        .red {
+            color: red;
+        }
+
+        .size {
+            /* size后面一定要给单位 */
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 类：定义 使用才能生效 -->
+    <p>这是第一个p标签</p>
+
+    <!-- 所有标签上都有class属性 -->
+    <!-- 一个标签可以使用多个类名，需要空格隔开即可 -->
+    <!-- 类名可以重复，一个类选择器可以同时选择多个标签 -->
+    <p class="red size">这是第二个p标签</p>
+
+    <div class="red">div标签也是红的</div>
+</body>
+</html>

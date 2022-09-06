@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 使用transforme-style: perserve-3d呈现立体图形 -->
+    <style>
+        .cube {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            /* background-color: pink; */
+            transition: all 5s;
+            transform-style: preserve-3d;
+        }
+
+        .cube div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 300px;
+        }
+
+        .font {
+            background-image: url(./images/chi.jpeg);
+            transform: translateZ(150px);
+        }
+        .left {
+            background-image: url(./images/cute.jpeg);
+            transform: translateX(-150px) rotateY(90deg);
+        }
+        .right {
+            background-image: url(./images/girl.jpeg);
+            /* transform: translateX(300px); */
+            transform: translateX(150px) rotateY(-90deg);
+        }
+        .back {
+            background-image: url(./images/kawayi.jpeg);
+            transform: translateZ(-150px);
+        }
+
+        .cube:hover {
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="font">前</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <div class="back">后</div>
+        <!-- <img src="./images/kawayi.jpeg" alt=""> -->
+    </div>
+</body>
+</html>

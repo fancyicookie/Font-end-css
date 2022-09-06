@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            margin: 0 auto;
+            width: 1000px;
+            /* height: 300px; */
+            /* 解决方法一就是加高度,但可能有不能加高度,或者高度未知的情况 */
+            background-color: pink;
+        }
+        .bottom {
+            height: 100px;
+            background-color: green;
+        }
+        .clearfix {
+            /* 解决方法二: 
+            在父元素内容的最后添加一个块级元素<div class="clearfix"></div>,
+            给添加的元素设置clear: both/left/right */
+            clear: both;
+        }
+        .left {
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .right {
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>

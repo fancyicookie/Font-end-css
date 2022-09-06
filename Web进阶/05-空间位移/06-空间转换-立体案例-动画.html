@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-立方体</title>
+   
+ 
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+ 
+       
+        .box {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px solid gray;
+            transform-style: preserve-3d;
+            position: relative;
+ 
+            /* 让大盒子在X轴和Y轴上旋转一些角度，在打开检查根据时能明显看到的效果 */
+            transform: rotateY(30deg) rotateX(30deg);
+ 
+            /* 加入动画 */
+            animation: run 4s linear infinite;
+        }
+ 
+        @keyframes run {
+            0% {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+ 
+            20% {
+                transform: rotateY(50deg) rotateX(80deg);
+            }
+ 
+            40% {
+                transform: rotateY(140deg) rotateX(100deg);
+            }
+ 
+            60% {
+                transform: rotateY(200deg) rotateX(280deg);
+            }
+ 
+            80% {
+                transform: rotateY(120deg) rotateX(100deg);
+            }
+            100% {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+ 
+        }
+ 
+        .box div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            /* 使子盒子排列在中间 */
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+ 
+            line-height: 200px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            opacity: 0.7;
+        }
+ 
+        .box div:nth-child(1) {
+            background-color: yellow;
+            transform: translateZ(100px);
+        }
+ 
+        .box div:nth-child(2) {
+            background-color: red;
+            transform: translateX(-100px) rotateY(-90deg);
+           
+        }
+ 
+        .box div:nth-child(3) {
+            background-color: green;
+            transform: translateY(-100px) rotateX(90deg);
+        }
+ 
+        .box div:nth-child(4) {
+            background-color: purple;
+            transform: translateY(-100px) rotateX(-90deg);
+        }
+ 
+        .box div:nth-child(5) {
+            background-color: blue;
+            transform: translateX(100px) rotateY(90deg);
+            /* 考虑到数字不能反向在外面，所以要考虑好旋转方向 */
+        }
+ 
+        .box div:nth-child(6) {
+            background-color: plum;
+            transform: translateZ(-100px) rotateY(-180deg);
+            /* 将数字6正面朝外 */
+        }
+ 
+        audio{
+            margin-left: 600px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+ 
+</body>
+ 
+</html>

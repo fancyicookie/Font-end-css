@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            /* 浏览器遇到行内和行内块标签当作文字处理，默认文字时按照基线对齐 */
+            height: 50px;
+            box-sizing: border-box;
+
+            vertical-align: middle;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+
+        .one {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 基线baseline -->
+    <!-- 浏览器处理行内元素，默认按照文字解析 -->
+    <!-- vertical-align  baseline/top/middle/bottom -->
+    <!-- 处理行内块和文字对齐或者行内块和行内块对齐都是vertical-align -->
+
+    <input type="text"><input type="button" value="搜索">
+    <br>
+    <img src="../images/kawayi.jpeg" alt=""><input type="text">
+    <br>
+    <br>
+    <div class="one">
+        <input type="text">
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        animation: 动画时长，动画时长，速度曲线，延迟时间，重复次数，动画方向，执行完毕状态
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+     -->
+     <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            /* animation: change 1s linear; */
+            /* linear 匀速运动 */
+
+            /* animation: change 1s steps(3); */
+            /* steps(3) 分3块执行 */
+            /* 延迟1s执行 */
+            /* 重复次数为 3 */
+            /* animation: change 1s steps(3) 1s 3; */
+
+            /* infinite 无限循环 */
+            /* animation: change 1s infinite alternate; */
+            /* alternate:动画方向 从大到小,从小到大; 从长到短,从短到长 */
+
+            /* 执行完毕状态 backwards 最初状态 默认值 */
+            /* 执行完毕状态 forwards  动画停留在结束状态*/
+            animation: change 1s forwards;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+     </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

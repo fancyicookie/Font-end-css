@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 400px;
+            background-color: pink;
+        }
+
+        .father .yiyi {
+            /* 浏览器把行内和行内块标签当作文字处理，默认基线对齐。所以这种情况用display:block也可以 */
+            vertical-align: middle;
+        }
+
+        .box {
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            line-height: 600px;
+            text-align: center;
+        }
+
+        .box .iu {
+            vertical-align: middle;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="../images/xiong.jpeg" alt="yiyi" class="yiyi">
+    </div>
+    <br>
+    <br>
+    <div class="box">
+        <img src="../images/iu.jpg" alt="iu" class="iu">
+    </div>
+</body>
+</html>

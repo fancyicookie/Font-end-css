@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 浏览器解析行内块或行内标签，如果标签换行会产生一个空间的间隙 */
+            display: inline-block;
+            /* 由于div书写的时候换行了，所以有一个空格的间距！！！ */
+            width: 100px;
+            height: 100px;
+            /* 这种时候用浮动解决比较好，浮动可以让一行完美的排列 */
+        }
+
+        .one {
+            background-color: skyblue;
+        }
+
+        .two {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+</body>
+</html>

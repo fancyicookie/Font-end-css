@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* text-align: left center right */
+        h1 {
+            text-align: left;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        div {
+            text-align: right;
+        }
+
+        /* 而且如果有body是整个页面内容都居中,先作用于body,然后再作用于单个h1 */
+    </style>
+</head>
+<body>
+    <h1>新闻标题</h1>
+
+    <!-- 图片是img,整体是在body里的,所以通常会在外面加div -->
+    <img src="./images/girl.jpeg" alt="girl" width="300" height="300">
+
+    <div>
+        <img src="./images/iu.webp" alt="iu" width="300" height="300">
+    </div>
+</body>
+</html>

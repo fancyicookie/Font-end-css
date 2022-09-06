@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 文本属性会被子标签继承 */
+        div {
+            color: blue;
+            font-size: 30px;
+            height: 200px;
+        }
+        i {
+            color: red;
+            font-size: 16px;
+            font-weight: 400;
+            /* font-style: normal;
+            font-family: 宋体; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        这是div标签
+        <span>这是div里的span</span>  <!-- inherited from div -->
+    </div>
+
+    <!-- 继承失效的情况：元素偶浏览器默认样式 -->
+    <!-- 1. a标签的color继承会失效 -->
+    <!-- 2. h系列的font-size font-weight会继承失效 -->
+        <!-- h1标题字大小变了，但是变的很奇怪，5px，10px显示不一样 -->
+    <i>
+        没有加a标签则是红色
+        <a href="#">加了a标签的超链接不是红色</a>
+        <h1>h1标题</h1>
+    </i>
+    
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .father {
+            width: 1200px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: pink;
+            
+            /* 超出父级范围的隐藏 */
+            overflow: hidden;
+        }
+        
+        .left, .right {
+            float: left;
+            width: 600px;
+            height: 600px;
+            transition: all 1s;
+        }
+
+        .left {
+            background-color: skyblue;  
+        }
+        .right {
+            background-color: orange;
+        }
+
+        .father:hover .left {
+            transform: translateX(-100%);
+        }
+
+        .father:hover .right {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
