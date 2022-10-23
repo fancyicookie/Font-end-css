@@ -10,4 +10,4 @@ https://www.bilibili.com/video/BV1xq4y1q7jZ
 
 <del>学习ing</del>（未完）
 
-css中有很多小细节，不经常用的话还是很容易忘记的。
+css中有很多小细节，不经常用的话很容易忘记
