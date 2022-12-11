@@ -1,0 +1,69 @@
+<!--
+ * @Date: 2022-12-11 10:07:37
+ * @Author: Fancyicookie
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2rem auto;
+            font: 0.9rem/1.2 Arial, Helvetica, sans-serif;
+        }
+
+        .container > div {
+            padding: 10px;
+            background-color: pink;
+            border: 2px solid rgb(191, 154, 169);
+            border-radius: 5px;
+        }
+        .container {
+            /* 默认为一列 */
+            display: grid;
+
+            /* 指定列宽度，有几个宽度，代表有几列 */
+            /* grid-template-columns: 100px 100px 100px; */
+
+            /* 以下这种写法比较简洁 */
+            /* grid-template-columns: repeat(6, 100px);  */
+            /* 随着行宽自动调整列宽 */
+            /* grid-template-columns: repeat(auto-fill, 100px);  */
+            /* 每个小块的宽度也会自动调整？？ */
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); 
+
+            /* fr 新的长度单位 */
+            /* 可以理解为 x + 2x + x = 父元素的宽度 */
+            /* grid-template-columns: 1fr 2fr 1fr;  */
+
+            /* 行的宽度 */
+            /* grid-template-rows: 100px 200px 50px; */
+
+            /* template rows 优先级高于 auto-rows */
+            grid-auto-rows: 100px;
+            /* 列，行的间隙 */
+            gap: 20px 40px;
+
+            /* 第二种：根据线指定布局：即划线的方法grid-columu, grid-row */
+            /* 第三种：根据区域名称指定布局：grid-area的方法, grid-template-areas */
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple grid example</h1>
+    <div class="container">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+    </div>
+</body>
+</html>
