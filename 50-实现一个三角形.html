@@ -1,0 +1,68 @@
+<!--
+ * @Date: 2023-01-06 16:10:45
+ * @Author: Fancyicookie
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 0px;
+            height: 0px;
+            border: 100px solid;
+            border-color: orange blue red green;
+        }
+        .box2 {
+            width: 0;
+            height: 0;
+            /* 不能单独设置一个border-top */
+            border-top: 100px solid pink;
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent;
+        }
+        .box3 {
+            width: 0;
+            height: 0;
+            /* 不能单独设置一个border-top */
+            border-bottom: 100px solid pink;
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent;
+        }
+        .box4 {
+            width: 0;
+            height: 0;
+            /* 不能单独设置一个border-top */
+            border-bottom: 100px solid transparent;
+            border-top: 100px solid transparent;
+            border-left: 100px solid red;
+        }
+        .box5 {
+            width: 0;
+            height: 0;
+            /* 不能单独设置一个border-top */
+            border-bottom: 100px solid transparent;
+            border-right: 100px solid red;
+            border-top: 100px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    css绘制三角形主要用到的是 border 属性。
+    border属性是<b>右三角形</b>组成的。
+    应该说边框每次都会比原来多两个像素包围整个图形，所以形成的一定是三角形。
+    <hr>
+    <div class="box1"></div>
+    <hr>
+    <div class="box2"></div>
+    <hr>
+    <div class="box3"></div>
+    <hr>
+    <div class="box4"></div>
+    <hr>
+    <div class="box5"></div>
+</body>
+</html>
