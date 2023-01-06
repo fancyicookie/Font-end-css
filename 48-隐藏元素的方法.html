@@ -1,0 +1,59 @@
+<!--
+ * @Date: 2023-01-06 15:20:06
+ * @Author: Fancyicookie
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* display: none; */
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            /* position: absolute;
+            left: -200px; */
+            /* transform: scale(0,0) */
+            /* clip-path: inset(200px 40px 40px 40px round 10px) */
+        }
+        .test1 {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+        }
+        .test2 {
+            width: 200px;
+            height: 200px;
+            /* background-color: orange; */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <h3>测试元素的方法：</h3>
+        <p>display: none 元素不会在页面占据位置，不会响应监听事件</p>
+        <p>visiblity: hidden 元素在页面占据位置，不会响应监听事件</p>
+        <p>opacity: 0 元素在页面占据位置，响应监听事件</p>
+        <p>position: absolute 绝对定位</p>
+        <p>z-index: 负值</p>
+        <p>clip/clip-path: 元素在页面占据位置，不会响应监听事件</p>
+        <p>transform: scale(0,0) 元素在页面占据位置，不会响应监听事件</p>
+    </div>
+    <div class="test" id="test">
+        <div class="test2"></div>
+    </div>
+    <div class="test1" id="test1"></div>
+    <script>
+        var box = document.getElementById('test')
+        box.onclick = function() {
+            alert('测试')
+        }
+    </script>
+</body>
+</html>

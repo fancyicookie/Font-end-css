@@ -1,0 +1,35 @@
+<!--
+ * @Date: 2023-01-06 15:52:26
+ * @Author: Fancyicookie
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+          width: 200px;
+          height: 200px;
+        }
+        .box1 {
+          position: relative;
+          z-index: 9; /* z-index属性值小 */
+          background-color: blanchedalmond;
+        }
+        .box2 {
+          position: relative;
+          top: -100px;
+          left: 100px;
+          z-index: 99; /* z-index属性值大 */
+          background-color: blueviolet;
+        }
+      </style>
+</head>
+<body>
+      <div class="box1">盒子1</div>
+      <div class="box2">盒子2</div>
+</body>
+</html>
