@@ -1,0 +1,74 @@
+<!--
+ * @Date: 2023-01-06 16:30:45
+ * @Author: Fancyicookie
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .test2 {
+            width: 100px;
+            height: 100px;
+            border: 0.5px solid red;
+        }
+        /* 方法一 */
+        /* #container[data-device="2"] {
+            border: 0.5px solid red;
+        } */
+
+        /* 方法二 */
+        /* #container[data-device="2"] {
+            position: relative;
+        }
+        #container[data-device="2"]::after{
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            content:"";
+            transform: scale(0.5);
+            transform-origin: left top;
+            box-sizing: border-box;
+            border: 1px solid rgb(141, 46, 46);
+        } */
+        .test {
+            position: relative;
+        }
+        .test::after{
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            content:"";
+            transform: scale(0.5);
+            transform-origin: left top;
+            box-sizing: border-box;
+            border: 1px solid rgb(67, 141, 46);
+        }
+    </style>
+</head>
+<body>
+    <h3>1px问题：</h3>
+    <p>在 PC 端浏览器的最小识别像素为 1px。即使是 0.5px也被识别为 1px。现在放大看就是不一样啊。。。</p>
+    <p>在一些 Retina 屏幕的机型上，移动端页面1px显得比较粗，呈现出不止1px的效果。</p>
+    <p>因为 css中的 1px 不能和移动设备上的 1px 划等号，比例关系是设备的 window.devicePixelRatio = 物理像素/css像素</p>
+    <hr>
+    <div class="test" id="container" data-device={{window.devicePixelRatio}}></div>
+    <br>
+    <div class="test2"></div>
+    <p>方法一：使用0.5px，但很多系统不兼容</p>
+    <p>方法二：伪元素放大后缩小</p>
+    <p>方法三：viewport : meta 标签 及 页面缩放 initial-sacle</p>
+</body>
+</html>
