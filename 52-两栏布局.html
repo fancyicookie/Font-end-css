@@ -1,0 +1,54 @@
+<!--
+ * @Date: 2023-01-06 17:07:15
+ * @Author: Fancyicookie
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.flex布局 */
+        /* .outer {
+            display: flex;
+            height: 100px;
+        }
+        .left {
+            width: 200px;
+            background-color: pink;
+        }
+        .right {
+            flex: 1;
+            background-color: orange;
+        } */
+
+        /* float: left; 使得指定元素脱离普通的文档流而产生的特别的布局特性。 */
+        .outer {
+            height: 100px;
+            background-color: green;
+        }
+        .left {
+            float: left;
+            width: 200px;
+            background: tomato;
+        }
+        .right {
+            margin-left: 200px;
+            width: auto;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.flex 布局 -->
+    <!-- 2.利用浮动，左边元素宽度设置为200px，右边margin-left设置为200px -->
+    <!-- 3.利用浮动，BFC -->
+    <!-- 4.绝对定位 -->
+    <div class="outer">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

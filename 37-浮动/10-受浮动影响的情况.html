@@ -1,3 +1,7 @@
+<!--
+ * @Date: 2022-07-25 11:49:06
+ * @Author: Fancyicookie
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 清除浮动的方法 */
+        /* .clearfix:after{
+            content: " ";
+            display: table; 
+            height: 0;
+            clear: both;
+        }
+        .clearfix{
+            *zoom: 1;
+        } */
         .top {
             margin: 0 auto;
             width: 1000px;
@@ -32,9 +46,10 @@
     </style>
 </head>
 <body>
-    <div class="top">
-        <div class="left"></div>
-        <div class="right"></div>
+    <!-- 浮动：非IE浏览器下，容器不设高度且子元素浮动时，容器高度不能被内容撑开。 -->
+    <div class="top clearfix">
+        <div class="left">left</div>
+        <div class="right">right</div>
     </div>
     <div class="bottom"></div>
 </body>
